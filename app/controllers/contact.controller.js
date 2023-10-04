@@ -48,7 +48,7 @@ exports.create = async (req, res, next) => {
 };
 
 // Retrieve all contacts of a user from the database
-exports.findAll = async (req, res, next) => {
+exports.findALL = async (req, res, next) => {
     let documents = [];
     try {
         const contactService = new ContactService (MongoDB.client);
