@@ -124,7 +124,7 @@ exports.delete = async (req, res, next) => {
 };
 
 // Find all favorite contacts of a user
-exports.findAllFavorite = async (req, res, next) => {
+exports.findALLFavorite = async (req, res, next) => {
     try {
         const contactService = new ContactService (MongoDB.client);
         const documents = await contactService.findFavorite();
