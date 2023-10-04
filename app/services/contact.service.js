@@ -13,7 +13,7 @@ class ContactService {
             favorite: payload.favorite,
         };
         // Remove undefined fields
-        Objects.keys(contact).forEach(
+        Object.keys(contact).forEach(
             (key) => contact[key] === undefined && delete contact[key]
         );
         return contact;
@@ -26,7 +26,7 @@ class ContactService {
             { $set: { favorite: contact.favorite === true } },
             { returnDocument: "after", upsert: true }
         );
-        return result.value;
+        return result;
     }
 
     async find(filter) {

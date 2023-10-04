@@ -41,6 +41,7 @@ exports.create = async (req, res, next) => {
         return res.send(document);
     } catch (error) {
         return next(
+            //console.log(error),
             new ApiError (500, "An error occurred while creating the contact")
         );
     }
